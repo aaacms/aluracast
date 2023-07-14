@@ -1,0 +1,77 @@
+/*-----------grid do body-----------------------------------*/
+body {
+    display: grid;
+    grid-template-areas: 
+    "aside header"
+    "aside main";
+    grid-template-columns: auto 1fr;
+}
+
+.cabecalho {
+    grid-area: header;
+}
+
+.menu-lateral {
+    grid-area: aside;
+}
+
+.principal {
+    grid-area: main;
+}
+
+/*-----------grid do cartão tocados recentemente------------*/
+
+.secao-horizontal .cartao {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 
+    "a b c"
+    "a d c"
+    "a e c"
+}
+
+.secao-horizontal .cartao__imagem {
+    grid-area: a;
+}
+
+.secao-horizontal .cartao__titulo {
+    grid-area: b;
+}
+
+.secao-horizontal .cartao__subtitulo {
+    grid-area: d;
+}
+
+.secao-horizontal .cartao__player {
+    grid-area: e;
+}
+
+.cartao__titulo, .cartao__subtitulo, .cartao__player {
+    margin-left: 1em;
+}
+
+.secao-horizontal .cartao__botao {
+    grid-area: c;
+}
+
+/*-----------grid dos verticais--------------------------*/
+.secao-vertical {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+    "a b"
+    "c c"
+}
+
+.secao-vertical .secao__titulo {
+    grid-area: a;
+}
+
+.secao-vertical .secao__link {
+    grid-area: b;
+}
+
+.secao-vertical .secao__cartoes {
+    grid-area: c;
+}
